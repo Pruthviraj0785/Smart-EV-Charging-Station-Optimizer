@@ -1,0 +1,225 @@
+{
+  "version": 1,
+  "author": "Smart EV Charging Station Optimizer",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 20,
+      "left": 20,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "potV",
+      "top": 25,
+      "left": 300,
+      "attrs": {
+        "value": "2048"
+      }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "potI",
+      "top": 150,
+      "left": 300,
+      "attrs": {
+        "value": "1200"
+      }
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht",
+      "top": 275,
+      "left": 300,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btnIn",
+      "top": 330,
+      "left": 20,
+      "attrs": {
+        "color": "green"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btnOut",
+      "top": 400,
+      "left": 20,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay",
+      "top": 470,
+      "left": 250,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledG",
+      "top": 300,
+      "left": 500,
+      "attrs": {
+        "color": "green"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledY",
+      "top": 360,
+      "left": 500,
+      "attrs": {
+        "color": "yellow"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledR",
+      "top": 420,
+      "left": 500,
+      "attrs": {
+        "color": "red"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "esp:3V3",
+      "potV:VCC",
+      "red",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "potV:GND",
+      "black",
+      []
+    ],
+    [
+      "potV:SIG",
+      "esp:34",
+      "green",
+      []
+    ],
+    [
+      "esp:3V3",
+      "potI:VCC",
+      "red",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "potI:GND",
+      "black",
+      []
+    ],
+    [
+      "potI:SIG",
+      "esp:35",
+      "green",
+      []
+    ],
+    [
+      "esp:3V3",
+      "dht:VCC",
+      "red",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "dht:GND",
+      "black",
+      []
+    ],
+    [
+      "dht:SDA",
+      "esp:15",
+      "green",
+      []
+    ],
+    [
+      "btnIn:1",
+      "esp:32",
+      "green",
+      []
+    ],
+    [
+      "btnIn:2",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "btnOut:1",
+      "esp:33",
+      "green",
+      []
+    ],
+    [
+      "btnOut:2",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "esp:5V",
+      "relay:VCC",
+      "red",
+      []
+    ],
+    [
+      "esp:GND.2",
+      "relay:GND",
+      "black",
+      []
+    ],
+    [
+      "relay:IN",
+      "esp:26",
+      "green",
+      []
+    ],
+    [
+      "esp:18",
+      "ledG:A",
+      "green",
+      []
+    ],
+    [
+      "ledG:C",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "esp:19",
+      "ledY:A",
+      "yellow",
+      []
+    ],
+    [
+      "ledY:C",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "esp:23",
+      "ledR:A",
+      "red",
+      []
+    ],
+    [
+      "ledR:C",
+      "esp:GND.1",
+      "black",
+      []
+    ]
+  ]
+}

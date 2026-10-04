@@ -1,0 +1,13 @@
+{
+  "bayId": "string",
+  "voltage": "float",
+  "current": "float",
+  "power": "float",
+  "energyWh": "float",
+  "temperature": "float",
+  "bayStatus": "FREE|CHARGING|FAULT",
+  "predictedArrivalProb": "0..1",
+  "predictedDurationMin": "minutes",
+  "loadDecision": "ALLOW|THROTTLE|DEFER",
+  "throttleLevel": "0..100"
+}

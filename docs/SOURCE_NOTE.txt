@@ -1,0 +1,1 @@
+This package was prepared from the uploaded EV Charging Optimizer SRS/SDD and kickoff material in this conversation.
